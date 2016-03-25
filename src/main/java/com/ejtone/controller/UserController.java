@@ -6,10 +6,12 @@ package com.ejtone.controller;
 
 
 import com.ejtone.entity.User;
-import org.springframework.boot.SpringApplication;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -17,21 +19,25 @@ import org.springframework.web.bind.annotation.RestController;
  * <p>Date: 15-12-22
  * <p>Version: 1.0
  */
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 @RestController
 @RequestMapping("/user")
 public class UserController {
+    static Log log = LogFactory.getLog(UserController.class);
 
-    @RequestMapping("/{id}")
-    public User view(@PathVariable("id") Long id) {
+    @RequestMapping(method = RequestMethod.DELETE, value ="/{id}")
+    public boolean deleteUser(@PathVariable("id") Long id) {
+        log.info("deleting user, "+id);
+        return id==1?true:false;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value ="/{id}")
+    public String getUser(@PathVariable("id") Long id){
         User user = new User();
         user.setId(id);
         user.setName("yuan");
-        return user;
+        log.info("getting user, "+id);
+        return user.getName();
     }
-
-//    public static void main(String[] args) {
-//        SpringApplication.run(UserController.class);
-//    }
-
 }
+

@@ -17,7 +17,7 @@ public class MyService implements CommandLineRunner {
         try {
             while(true) {
                 Thread.sleep(2*1000);
-                log.info("I am running...");
+//                log.info("I am running...");
             }
         }catch (Exception ex) {
             log.error("Error occurred.",ex);
