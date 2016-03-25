@@ -42,8 +42,7 @@ import static com.ejtone.util.Util.getTimeStamp;
 public class ChifMTController {
     static Log log = LogFactory.getLog(ChifMTController.class);
 
-//    public static String baseUrl = "http://570.pro-group.cn:28080/chif10";
-    public static String baseUrl = "http://maas.ejtone.com:28080/chif10";
+    public static String baseUrl = "http://ip:port/chif10";
 
     @RequestMapping(method = RequestMethod.GET, value = "/testmt/{user}/{pw}/{mobiles}/{content}")
     public String mtsms(@PathVariable String user,@PathVariable String pw,@PathVariable String mobiles,@PathVariable String content){
