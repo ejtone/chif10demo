@@ -8,7 +8,6 @@ package com.ejtone.controller;
 import com.ejtone.entity.ChifMTSubmit;
 import com.ejtone.entity.ChifResp;
 import com.ejtone.entity.ChifRets;
-import com.ejtone.entity.ChifRpt;
 import com.ejtone.util.Util;
 import com.google.gson.GsonBuilder;
 import org.apache.commons.codec.binary.Hex;
@@ -17,13 +16,9 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.http.Header;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingClientConnectionManager;
 import org.apache.http.util.EntityUtils;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -38,7 +33,7 @@ import java.net.URI;
 import static com.ejtone.util.Util.getTimeStamp;
 
 /**
- * <p>User: Ejtone易捷通(北京)科技有限公
+ * <p>User: Ejtone易捷通(北京)科技有限公司
  * <p>Date: 15-12-22
  * <p>Version: 1.0
  */
