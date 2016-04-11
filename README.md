@@ -38,7 +38,7 @@ CHIF10 采用http交互方式
   "Msg_src": "",
   "Src_Id": "",
   "Dest_terminal_Id": [
-    "1064823203415"
+    "13910101010"
   ],
   "Msg_Content": [
     51,55,50,57,51,57,50,51,50
@@ -78,7 +78,7 @@ http://localhost:8080/mybase/smsrptpush
   "TP_pId": 0,
   "TP_udhi": 0,
   "Msg_Fmt": 8,
-  "Src_terminal_Id": "13910638719",
+  "Src_terminal_Id": "13910101010",
   "Msg_Content": [78,45,0,49]
 }
 ```
@@ -87,7 +87,7 @@ http://localhost:8080/mybase/smsrptpush
 ```
 curl -v -X POST -H "Accept: application/json" \                        
 -H "Content-Type: application/json;charset=utf-8" \
--d '{Msg_Id='0325165507000104118440', Dest_Id='106900110001', TP_pId=0, TP_udhi=0, Msg_Fmt=8, Src_terminal_Id='13910638719', Msg_Content=[78, 45, 0, 49]}' \
+-d '{Msg_Id='0325165507000104118440', Dest_Id='106900110001', TP_pId=0, TP_udhi=0, Msg_Fmt=8, Src_terminal_Id='13910101010', Msg_Content=[78, 45, 0, 49]}' \
 http://localhost:8080/mybase/smsmopush
 ```
 
