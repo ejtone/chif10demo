@@ -93,7 +93,7 @@ http://localhost:8080/mybase/smsmopush
 
 ###模拟下行发送
 通过浏览器,发送GET请求
-http://sandbox.ejtone.com:8080/testmt/a00119/5gb2dg/18910xxxxxxx/【测试签名】测试内容
+http://sandbox.ejtone.com:8080/testmt/a00119/password/18910xxxxxxx/【测试签名】测试内容
 
 ## 许可
 版权归属易捷通（北京）科技有限公司
